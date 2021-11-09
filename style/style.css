@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif ;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+img{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+nav{
+    width: 100%;
+    padding: 15px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    
+}
+.flexdiv{
+    display: flex;
+    align-items: center;
+    
+}
+.flexdiv #logo{
+    width: 100%;
+    height: 40px;
+}
+.nav_btn{
+    margin-right: 20px;
+    padding: 8px 15px;
+    border-radius:5px;
+    outline:none;
+    border: none;
+}
+.nav_btn:hover{
+    background-color: greenyellow;
+}
+.search-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px ;
+}
+.search-box input{
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+.searchIcon{
+    width: 20px;
+}
+
+
+
+/* inner div */
+
+#inner_Div{
+    margin:0 8% 4% 8%;
+    height:300px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOI92UI6Wppc3m_9_482J7xkGdocyPrBcNqvCL4tijkhbnz8xxborS1qmbW295kewkSP0&usqp=CAU");
+    background-size: cover;
+  
+}
+#inner_Div > div {
+    display: flex; 
+    padding:5% 10%
+}
+#inner_Div > div .box_div{
+  
+   margin-right: 20px;
+    width: 250px;
+    height: 200px;
+ 
+}
+.box_div{
+    transition: transform 1s;
+    perspective:100px;
+}
+.box_div:hover{
+    transform:translatez(20px);
+ }
+#inner_Div > div  h3{
+    padding: 20px;
+    color: green;
+    text-decoration: italic;
+    text-align: center;
+}
+#div1{
+    background-image: url("https://cdn4.vectorstock.com/i/thumb-large/77/53/delicious-food-cartoon-vector-22887753.jpg");
+    background-size: cover;
+}
+#div2{
+    background-image: url("https://previews.123rf.com/images/yupiramos/yupiramos1903/yupiramos190313323/124299658-kawaii-cartoon-ice-cream-soda-donut-vector-illustration.jpg");
+    background-size: cover;
+}
+#div3{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP71P_vN8VxSKlruq2VHTRRIVX-Ua0_VkZHg&usqp=CAU");
+    background-size: cover;
+}
+#div4{
+    background-image: url("https://www.nicepng.com/png/detail/106-1065591_fast-food-cheeseburger-drink-with-french-fries-tattoo.png");
+    background-size: cover;
+}
+#div5{
+    background-image: url("https://thumbs.dreamstime.com/b/delicious-sweet-ice-cream-donuts-vector-illustration-design-142614436.jpg");
+    background-size: cover;
+}
+
+
+/* main Div */
+
+#main_div{
+    display: grid;
+    background-color:whitesmoke;
+    height:250px;
+    width:90%;
+    justify-content: center;
+    align-items:center;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+#main_div img{
+   width: 100%;
+   transition: transform 1s;
+}
+#main_div img:hover{
+    transform:translatez(20px)
+ }
+#main_div p{
+   text-align: center;
+ }
+
+ #slider_track{
+     display: flex;
+     width:calc(250px * 18);
+     width:90%;
+     justify-content: center;
+     align-items:center;
+     margin: auto;
+     animation: scroll 40s linear infinite;
+ }
+ #slider_track:hover{
+     animation-play-state: paused;
+ }
+ @keyframes scroll{
+     0% {
+         transform: translateX(0);
+     }
+     100% {
+        transform: translateX(calc(-250px * 9));
+    }
+ }
+ .slide{
+     width: 250px;
+     height:250px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 15px;
+    perspective:100px;
+ }
+ #main_div::before,
+ #main_div::after{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0% , rgba(255,255,255,0) 100%);
+    content: "";
+    height:100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+ }
+ #main_div::before{
+     left: 0;
+     top: 0;
+ }
+ #main_div::after{
+    right: 0;
+    top: 0;
+    transform:rotatez(180deg)
+}
+
+
+/* container */
+#outer_container{
+    width:100%;
+    padding:50px;
+    justify-content: center;
+    align-items: center;
+    background-color:blanchedalmond;
+}
+#outer_container h2{
+    justify-content: center;
+    align-items: center;
+    margin-left:550px ;
+    color: green;
+} 
+#container{
+    display: grid;
+    grid-template-columns: repeat(5,15%);
+    background-color:blanchedalmond;
+    height:600px;
+    width:100%;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+}
+#container img{ 
+    width: 100%;
+}
+#container div{
+    margin: 20px;
+    background-color: whitesmoke;
+    width: 180px;
+    height:250px;
+    box-shadow: 0 0 10 rgba(255, 255, 255,);
+}
+
+ /* popular recipes */
+
+ #recipes_data{
+    display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    margin-top: 80px;
+ }
+ #recipes_data img{
+     width: 30%;
+     height: 100%;
+ }
+#recipes_data p{
+    padding:5px 20px;
+    width: 100%;
+}
+#recipes_data .main{
+    display:flex;
+    margin-top:30px;
+    height:70%;
+   background-color: greenyellow;
+}
+/* search data */
+
+#search_data{
+    display: grid;
+    grid-template-columns: repeat(5,15%);
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    margin-top: 100px;
+}
+#search_data img{
+    width: 100%;
+}
+#search_data div{
+    margin-top:30px;
+    margin-right: 50px;
+    margin-bottom: 30px;  
+     height:95%;
+   background-color: greenyellow;
+ }
+ #search_data p{
+     padding:5px 20px;
+ }
+
+
+ /* ranndom latest recipe */
+
+ #latest_recipes{
+    display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    margin-top: 80px;
+ }
+ #latest_recipes img{
+     width: 30%;
+     height: 100%;
+ }
+#latest_recipes p{
+    padding:5px 20px;
+    width: 100%;
+}
+#latest_recipes .main{
+    display:flex;
+    margin-top:30px;
+    height:70%;
+   background-color: greenyellow;
+}
