@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery</title>
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+<body>
+    <nav id="navbar"></nav>
+    
+    <div id="latest_recipes"></div>
+
+    <div id="search_data"></div>
+
+    <div id="inner_Div">
+        <div>
+            <div onclick="popularRecipesPage()" class="box_div" id="div1"><a href="#"><h3>Popular Recipes</h3></a></div>
+            <div class="box_div" id="div2"><a href="#"><h3>Dessert</h3></a></div>
+            <div   onclick="latestRecipes()" class="box_div" id="div3"><a href="#"><h3>Latest Recipes of the Day</h3></a></div>
+            <div class="box_div" id="div4"><a href="#"><h3>Snacks</h3></a></div>
+            <div class="box_div" id="div5"><a href="#"><h3>Sweets</h3></a></div>
+        </div>
+        
+    </div>
+    <div id="main_div">
+        <div id="slider_track"></div>
+    </div>
+    <div id="outer_container">
+        <h2>Popular Dishes</h2>
+        <div id="container"></div>
+    </div>
+
+    <script src="./script/script.js"></script>
+   
+    
+</body>
+</html>
+
+<script type="module">
+
+    import navbar from './componant/navbar.js'
+    let nav_div = document.getElementById('navbar');
+    nav_div.innerHTML = navbar();
+    
+</script>
+
+
